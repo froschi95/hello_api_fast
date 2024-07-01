@@ -39,7 +39,7 @@ async def hello(request: Request, visitor_name: str = "Guest"):
     except Exception as e:
         return {"error": "Error fetching data: " + str(e)}, 500
 
-# Uncomment the below lines if you want to run this script locally
-# if __name__ == '__main__':
-#     import uvicorn
-#     uvicorn.run(app, host="0.0.0.0", port=8000)
+
+if __name__ == '__main__':
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8000)
