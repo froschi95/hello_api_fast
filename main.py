@@ -26,7 +26,7 @@ async def get_geodata(request: Request):
         return { 'client_ip': client_ip, 'location': 'unknown', 'temperature': 'unknown', 'error': str(e) }
 
 @app.get("/api/hello")
-async def hello(request: Request, visitor_name: str = "Guest"):
+async def hello(request: Request, visitor_name: str = "Mark"):
     try:
         geo_response = await get_geodata(request)
 
